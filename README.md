@@ -87,6 +87,35 @@ CSV file containing 14 columns:
 Please note we have included a python pickle file for ease of use. This includes
 a pandas dataframe with the same layout as above. This pickle file was created with pickle protocol 2 on pandas version 0.22.0.
 
+### Collision Detection
+Data preparation:
+    (1) Save data into yolo format as follows:
+        project_folder/                                                    
+        │                                                                       
+        ├── train/                                                                       
+        │   ├── images/                                                                       
+        │   │   ├── image1.jpg                                                                       
+        │   │   ├── image2.jpg                                                                       
+        │   │   └── ...                                                                       
+        │   └── labels/                                                                       
+        │       ├── image1.txt                                                                       
+        │       ├── image2.txt                                                                       
+        │       └── ...                                                                       
+        │                                                                       
+        └── test/                                                                       
+            ├── images/                                                                       
+            │   ├── image1.jpg                                                                                                                          
+            │   ├── image2.jpg                                                                       
+            │   └── ...                                                                       
+            └── labels/                                                                       
+                ├── image1.txt                                                                       
+                ├── image2.txt                                                                       
+                └── ...                                                                       
+
+    (2) Generate a summary of images:
+        use train-val.py in scripts to generate train.txt and val.txt.
+        write the path of train.txt and val.txt into a yaml file.
+
 ## File Downloads
 
 Due to the size of the dataset we provide scripts for downloading parts of the dataset:
