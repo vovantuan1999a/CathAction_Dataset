@@ -89,7 +89,9 @@ a pandas dataframe with the same layout as above. This pickle file was created w
 
 ### Collision Detection
 Data preparation:
+
     (1) Save data into yolo format as follows:
+    
         project_folder/                                                    
         │                                                                       
         ├── train/                                                                       
@@ -111,6 +113,7 @@ Data preparation:
                 ├── image1.txt                                                                       
                 ├── image2.txt                                                                       
                 └── ...                                                                       
+
 
     (2) Generate a summary of images:
         use train-val.py in scripts to generate train.txt and val.txt.
