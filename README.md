@@ -24,8 +24,8 @@ When using the dataset, kindly reference:
 We provide ground truth for action segments and object bounding boxes.
 
 * **Objects collision detection:** We annotate the tip of the catheter (or guidewire) with a bounding box.
-* **Actions:**These classes belong to three groups: catheter (advance catheter and retract catheter), guidewire (advance guidewire and retract guidewire), and one action involving both the catheter and guidewire (rotate).
-* **Segmentation*:** We manually label the catheter and the guidewire class separately in our dataset.
+* **Actions:** These classes belong to three groups: catheter (advance catheter and retract catheter), guidewire (advance guidewire and retract guidewire), and one action involving both the catheter and guidewire (rotate).
+* **Segmentation:** We manually label the catheter and the guidewire class separately in our dataset.
 
 ### Dataset Splits
 The dataset is comprised of three splits with the corresponding ground truth:
