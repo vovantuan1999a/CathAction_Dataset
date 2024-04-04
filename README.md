@@ -64,14 +64,8 @@ CSV file containing 14 columns:
 | `start_timestamp`   | string                       | `00:23:43.847`   | Start time in `HH:mm:ss.SSS` of the action.                                                                           |
 | `stop_timestamp`    | string                       | `00:23:47.212`   | End time in `HH:mm:ss.SSS` of the action.                                                                             |
 | `start_frame`       | int                          | `85430`          | Start frame of the action (WARNING only for frames extracted as detailed in [Video Information](#video-information)). |
-| `stop_frame`        | int                          | `85643`          | End frame of the action (WARNING only for frames  extracted as detailed in [Video Information](#video-information)).  |
-| `participant_id`    | string                       | `P03`            | ID of the participant.                                                                                                |
-| `verb`              | string                       | `close`          | Parsed verb from the narration.                                                                                       |
-| `noun`              | string                       | `fridge`         | First parsed noun from the narration.                                                                                 |
-| `verb_class`        | int                          | `3`              | Numeric ID of the parsed verb's class.                                                                                |
-| `noun_class`        | int                          | `10`             | Numeric ID of the parsed noun's class.                                                                                |
-| `all_nouns`         | list of string (1 or more)   | `['fridge']`     | List of all parsed nouns from the narration.                                                                          |
-| `all_noun_classes` | list of int    (1 or more)   | `[10]`           | List of numeric IDs corresponding to all of the parsed nouns' classes from the narration.                             |
+| `stop_frame`        | int                          | `85643`          | End frame of the action (WARNING only for frames  extracted as detailed in [Video Information](#video-info                                                        |
+| `all_noun_classes` | list of int    (1 or more)   | `[1]`           | List of numeric IDs corresponding to all of the parsed Action' classes.                             |
 
 Please note we have included a python pickle file for ease of use. This includes
 a pandas dataframe with the same layout as above. This pickle file was created with pickle protocol 2 on pandas version 0.22.0.
@@ -88,13 +82,7 @@ CSV file containing 14 columns:
 | `stop_timestamp`    | string                       | `00:23:47.212`   | End time in `HH:mm:ss.SSS` of the action.                                                                             |
 | `start_frame`       | int                          | `85430`          | Start frame of the action (WARNING only for frames extracted as detailed in [Video Information](#video-information)). |
 | `stop_frame`        | int                          | `85643`          | End frame of the action (WARNING only for frames  extracted as detailed in [Video Information](#video-information)).  |
-| `participant_id`    | string                       | `P03`            | ID of the participant.                                                                                                |
-| `verb`              | string                       | `close`          | Parsed verb from the narration.                                                                                       |
-| `noun`              | string                       | `fridge`         | First parsed noun from the narration.                                                                                 |
-| `verb_class`        | int                          | `3`              | Numeric ID of the parsed verb's class.                                                                                |
-| `noun_class`        | int                          | `10`             | Numeric ID of the parsed noun's class.                                                                                |
-| `all_nouns`         | list of string (1 or more)   | `['fridge']`     | List of all parsed nouns from the narration.                                                                          |
-| `all_noun_classes` | list of int    (1 or more)   | `[10]`           | List of numeric IDs corresponding to all of the parsed nouns' classes from the narration.                             |
+| `all_noun_classes` | list of int    (1 or more)   | `[1]`           | List of numeric IDs corresponding to all of the parsed Action' classes.                              |
 
 Please note we have included a python pickle file for ease of use. This includes
 a pandas dataframe with the same layout as above. This pickle file was created with pickle protocol 2 on pandas version 0.22.0.
