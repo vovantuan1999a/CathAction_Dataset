@@ -219,10 +219,10 @@ For the installation, you have to clone this repo and download the annotations a
 
 ```sh
 # Clone the project
-$ git clone https://github.com/guglielmocamporese/epic-kitchens-dataset-pytorch.git ek_datasets
+$ git clone https://github.com/vovantuan1999a/CathAction_Dataset.git
 
 # Go to the project folder
-$ cd ek_datasets
+$ cd CathAction_Dataset
 
 # Download the annotations
 $ ./setup_annotations.sh
