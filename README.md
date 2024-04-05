@@ -57,7 +57,7 @@ We also provide the RGB-features, Flow-feature in the: ...
 CSV file containing 14 columns:
 
 | Column Name         | Type                         | Example          | Description                                                                                                           |
-| ------------------- | ---------------------------- | ---------------- | --------------------------------------------------------------------------------------------------------------------- |                                                                                       |
+| ------------------- | ---------------------------- | ---------------- | --------------------------------------------------------------------------------------------------------------------- |                                                                
 | `video_id`          | string                       | `P03_01`         | Video the segment is in.                                                                                              |
 | `start_timestamp`   | string                       | `00:23:43.847`   | Start time in `HH:mm:ss.SSS` of the action.                                                                           |
 | `stop_timestamp`    | string                       | `00:23:47.212`   | End time in `HH:mm:ss.SSS` of the action.                                                                             |
