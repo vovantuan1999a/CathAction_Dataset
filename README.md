@@ -140,10 +140,10 @@ Videos are recorded in 500x500 at 24 FPS. If you wish to extract frames we sugge
 variable FPS, this can be achieved in a single step with FFmpeg: 
 
 ```
-ffmpeg -i "P##_**.MP4" -vf "scale=-2:256" -q:v 4 -r 60 "P##_**/frame_%010d.jpg"
+ffmpeg -i "**.MP4" -vf "scale=-2:256" -q:v 4 -r 60 "**/frame_%010d.jpg"
 ```
 
-where `##` is the Participant ID and `**` is the video ID.
+where `**` is the video ID.
 
 Optical flow was extracted using a fork of
 [`gpu_flow`](https://github.com/feichtenhofer/gpu_flow) made 
@@ -171,8 +171,8 @@ loader = PipeLoaders([
     FramesLoader(sampler, 'path/to/frames', fps=5.0, transform_frame=transforms.ToTensor()),
     FeaturesLoader(sampler, 'path/to/features', fps=5.0, input_name='obj'),
 ])
-csv = get_ek100_annotation(partition='train') # Load annotations (dataframe)
-ds = EpicDataset(csv, partition='train', loader=loader, task='recognition') # Create the EK dataset
+csv = get_cathaction_annotation(partition='train') # Load annotations (dataframe)
+ds = CathActionDatasets(csv, partition='train', loader=loader, task='recognition') # Create the CathAction dataset
 
 # Get sample
 sample = next(iter(ds))
@@ -180,9 +180,6 @@ sample = next(iter(ds))
 """
 sample['uid'] -> int
 sample['frame'] -> tensor of shape [C, T, H, W]
-sample['obj'] -> tensor of shape [T, D]
-sample['noun_class'] -> int
-sample['verb_class'] -> int
 sample['action_class'] -> int
 """
 
@@ -202,8 +199,8 @@ loader = PipeLoaders([
     FramesLoader(sampler, 'path/to/frames', fps=5.0, transform_frame=transforms.ToTensor()),
     FeaturesLoader(sampler, 'path/to/features', fps=5.0, input_name='obj'),
 ])
-csv = get_ek55_annotation(partition='train', use_rulstm_splits=True) # Load annotations (dataframe)
-ds = EpicDataset(csv, partition='train', loader=loader, task='recognition') # Create the EK dataset
+csv = get_cathaction_annotation(partition='train', use_rulstm_splits=True) # Load annotations (dataframe)
+ds = CathActionDatasets(csv, partition='train', loader=loader, task='recognition') # Create the CathAction dataset
 
 # Get sample
 sample = next(iter(ds))
@@ -211,10 +208,6 @@ sample = next(iter(ds))
 """
 sample['uid'] -> int
 sample['frame'] -> tensor of shape [C, T, H, W]
-sample['obj'] -> tensor of shape [T, D]
-sample['mask'] -> tensor of shape [T]
-sample['noun_class'] -> int
-sample['verb_class'] -> int
 sample['action_class'] -> int
 """
 
