@@ -72,10 +72,8 @@ a pandas dataframe with the same layout as above. This pickle file was created w
 CSV file containing 14 columns:
 
 | Column Name         | Type                         | Example          | Description                                                                                                           |
-| ------------------- | ---------------------------- | ---------------- | --------------------------------------------------------------------------------------------------------------------- |
-                                                                                          |
-| `video_id`          | string                       | `P03_01`         | Video the segment is in.                                                                                              |
-                                                      |
+| ------------------- | ---------------------------- | ---------------- | --------------------------------------------------------------------------------------------------------------------- |                                                                                       
+| `video_id`          | string                       | `P03_01`         | Video the segment is in.                                                                                                                                               |
 | `start_timestamp`   | string                       | `00:23:43.847`   | Start time in `HH:mm:ss.SSS` of the action.                                                                           |
 | `stop_timestamp`    | string                       | `00:23:47.212`   | End time in `HH:mm:ss.SSS` of the action.                                                                             |
 | `start_frame`       | int                          | `85430`          | Start frame of the action (WARNING only for frames extracted as detailed in [Video Information](#video-information)). |
